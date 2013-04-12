@@ -36,3 +36,7 @@ github "sudo",     "1.0.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 mod "puppetlabs/vcsrepo", "0.1.1"
+# TODO(chris): add a version when brewcask stabilizes.
+mod "brewcask",
+  :git => "https://github.com/phinze/puppet-brewcask",
+  :ref => "fc9adbf88063d2681cda608df47d517470d03fed"

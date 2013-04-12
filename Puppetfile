@@ -4,6 +4,8 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
+forge "http://forge.puppetlabs.com"
+
 def github(name, version, options = nil)
   options ||= {}
   options[:repo] ||= "boxen/puppet-#{name}"
@@ -33,3 +35,4 @@ github "sudo",     "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+mod "puppetlabs/vcsrepo", "0.1.1"

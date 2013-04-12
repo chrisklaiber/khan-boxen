@@ -1,3 +1,8 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs/vcsrepo (0.1.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -74,6 +79,7 @@ DEPENDENCIES
   nginx (= 1.1.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
+  puppetlabs/vcsrepo (= 0.1.1)
   ruby (= 3.1.0)
   stdlib (= 3.0.0)
   sudo (= 1.0.0)

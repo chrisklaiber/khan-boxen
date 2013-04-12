@@ -73,11 +73,12 @@ node default {
     [
       'ack',
       'findutils',
-      'google-app-engine',
       'gnu-tar',
       'mercurial',
     ]:
   }
+
+  include projects::website
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,

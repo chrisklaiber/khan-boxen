@@ -8,6 +8,7 @@ class projects::devtools {
 
   file { $devtools: ensure => 'directory' }
 
+  repository { "$devtools/khan-dotfiles": source => 'Khan/khan-dotfiles' }
   repository { "$devtools/kiln-review": source => 'Khan/kiln-review' }
   repository { "$devtools/khan-linter": source => 'Khan/khan-linter' }
   repository { "$devtools/arcanist": source    => 'Khan/arcanist' }

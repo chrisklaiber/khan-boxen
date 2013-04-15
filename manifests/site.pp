@@ -78,6 +78,7 @@ node default {
     ]:
   }
 
+  include projects::devtools
   include projects::website
 
   file { "${boxen::config::srcdir}/our-boxen":

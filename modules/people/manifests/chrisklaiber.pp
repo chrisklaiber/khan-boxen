@@ -3,11 +3,19 @@ class people::chrisklaiber {
 
   package {
     [
+      "autojump",
+      "bash",
+    ]:
+  }
+
+  package {
+    [
       "caffeine",
       "colloquy",
       "dropbox",
       "firefox",
       "google-chrome",
+      "hip-chat",
       "iterm2",
       "skype",
       "the-unarchiver",

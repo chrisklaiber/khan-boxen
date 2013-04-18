@@ -78,8 +78,7 @@ node default {
     ]:
   }
 
-  include projects::devtools
-  include projects::website
+  include projects::all
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,

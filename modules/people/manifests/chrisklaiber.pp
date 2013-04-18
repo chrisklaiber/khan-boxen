@@ -20,6 +20,12 @@ class people::chrisklaiber {
       "skype",
       "the-unarchiver",
     ]:
-      provider => "brewcask"
+      ensure   => present,  # TODO(chris): implement "upgradeable" in puppet-brewcask
+      provider => "brewcask",
+      before   => Exec['brew cask linkapps'],
+  }
+
+  exec { 'brew cask linkapps':
+    command => "${boxen_home}/homebrew/bin/brew cask linkapps --appdir=/Applications",
   }
 }

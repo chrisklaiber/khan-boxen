@@ -8,11 +8,11 @@ class projects::devtools {
 
   file { $devtools: ensure => 'directory' }
 
-  repository { "$devtools/khan-dotfiles": source => 'Khan/khan-dotfiles' }
-  repository { "$devtools/kiln-review": source => 'Khan/kiln-review' }
-  repository { "$devtools/khan-linter": source => 'Khan/khan-linter' }
-  repository { "$devtools/arcanist": source    => 'Khan/arcanist' }
-  repository { "$devtools/libphutil": source   => 'Khan/libphutil' }
+  repository { "${devtools}/khan-dotfiles": source => 'Khan/khan-dotfiles' }
+  repository { "${devtools}/kiln-review": source => 'Khan/kiln-review' }
+  repository { "${devtools}/khan-linter": source => 'Khan/khan-linter' }
+  repository { "${devtools}/arcanist": source => 'Khan/arcanist' }
+  repository { "${devtools}/libphutil": source => 'Khan/libphutil' }
   vcsrepo { "${devtools}/mercurial-extensions-rdiff":
     source   => 'https://bitbucket.org/brendan/mercurial-extensions-rdiff',
     provider => 'hg',

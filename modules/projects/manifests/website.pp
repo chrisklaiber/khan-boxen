@@ -13,11 +13,15 @@ class projects::website {
     ]:
   }
 
-  $website_stable = 'https://khanacademy.kilnhg.com/Code/Website/Group/stable'
-  exec { "hg clone ${website_stable} ${khan}/website/stable":
-    user    => $luser,
-    creates => "${khan}/website/stable",
-    require => Package['mercurial'],
+  #$webapp = 'https://khanacademy.kilnhg.com/Code/Website/Group/webapp'
+  #exec { "hg clone ${webapp} ${khan}/webapp-hg":
+  #  user    => $luser,
+  #  creates => "${khan}/webapp-hg",
+  #  require => Package['mercurial'],
+  #}
+
+  repository { "${khan}/webapp":
+    source => 'ssh://khanacademy@khanacademy.kilnhg.com/Website/Group/webapp',
   }
 
   file { "${khan}/datastore":

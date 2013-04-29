@@ -78,6 +78,17 @@ node default {
     ]:
   }
 
+  # unfortunately, we require homebrew head-only packages
+  exec { "brew tap homebrew/headonly":
+    user => $luser,
+    creates => "${homebrew::config::tapsdir}/homebrew-headonly",
+  }
+  package {
+    ['git-hg']:
+      require => Exec['brew tap homebrew/headonly'],
+      install_options => [ '--HEAD' ],
+  }
+
   include projects::all
 
   file { "${boxen::config::srcdir}/our-boxen":

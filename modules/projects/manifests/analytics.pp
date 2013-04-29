@@ -9,7 +9,7 @@ class projects::analytics {
   package {
     [
       's3cmd',
-      'gpg',  # used by s3cmd
+      'gnupg',  # used by s3cmd
     ]:
   }
 

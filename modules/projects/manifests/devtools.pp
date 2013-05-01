@@ -4,7 +4,7 @@
 # is run from the developer's user account.
 
 class projects::devtools {
-  $devtools = "/Users/${luser}/devtools"
+  $devtools = "/Users/${luser}/khan/devtools"
 
   file { $devtools: ensure => 'directory' }
 

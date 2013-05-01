@@ -72,6 +72,7 @@ node default {
   package {
     [
       'ack',
+      'coreutils',
       'findutils',
       'gnu-tar',
       'mercurial',
